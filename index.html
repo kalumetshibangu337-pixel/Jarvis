@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,
+                   maximum-scale=1.0, user-scalable=no">
+
+    <meta name="theme-color" content="#05070d">
+
+    <title>My AI Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <h1 id="assistantName">JARVIS</h1>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span id="statusText">EN LIGNE</span>
+                </div>
+            </div>
+
+            <button class="settings-button" id="settingsButton">
+                ⚙️
+            </button>
+
+        </header>
+
+
+        <!-- AI CORE -->
+        <main>
+
+            <section class="core-section">
+
+                <div class="core-container" id="core">
+
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+
+                    <div class="core-glow"></div>
+
+                    <div class="core-center">
+                        <span>◈</span>
+                    </div>
+
+                </div>
+
+                <p id="assistantMessage">
+                    Comment puis-je vous aider ?
+                </p>
+
+            </section>
+
+
+            <!-- CHAT -->
+            <section class="chat" id="chat">
+
+                <div class="message ai-message">
+                    Bonjour. Je suis prêt à vous assister.
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- INPUT -->
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Écrivez à JARVIS..."
+                autocomplete="off"
+            >
+
+            <button id="sendButton" class="send-button">
+                ↑
+            </button>
+
+        </div>
+
+
+        <!-- MICROPHONE -->
+        <button id="micButton" class="mic-button">
+
+            <div class="mic-circle">
+                🎙️
+            </div>
+
+        </button>
+
+    </div>
+
+
+    <!-- SETTINGS MODAL -->
+    <div class="modal hidden" id="settingsModal">
+
+        <div class="modal-content">
+
+            <button class="close-button" id="closeSettings">
+                ×
+            </button>
+
+            <h2>Paramètres</h2>
+
+            <label for="nameInput">
+                Nom de l'assistant
+            </label>
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="JARVIS"
+                maxlength="20"
+            >
+
+            <button id="saveName" class="save-button">
+                Enregistrer
+            </button>
+
+            <h3>Suggestions</h3>
+
+            <div class="name-buttons">
+
+                <button data-name="JARVIS">JARVIS</button>
+                <button data-name="FRIDAY">FRIDAY</button>
+                <button data-name="EDITH">EDITH</button>
+                <button data-name="NOVA">NOVA</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
